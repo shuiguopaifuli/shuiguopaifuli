@@ -1,1 +1,52 @@
-ok
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>水果派福利 加载中...</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .message {
+            text-align: center;
+        }
+        .message h1 {
+            font-size: 2em;
+            color: #333;
+        }
+        .message p {
+            font-size: 1em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        <h1>水果派福利 加载中...</h1>
+        <p>请稍候...</p>
+    </div>
+
+    <script>
+        // 获取URL中的so参数值
+        const urlParams = new URLSearchParams(window.location.search);
+        const a = urlParams.get('so');
+
+        // 如果so参数存在，跳转到指定的URL
+        if (a) {
+            setTimeout(() => {
+                window.location.href = `https://jable.tv/search/${a}`;
+            }, 2000); // 等待2秒后跳转
+        } else {
+            document.querySelector('.message h1').textContent = '加载失败';
+            document.querySelector('.message p').textContent = '未找到有效的作品。';
+        }
+    </script>
+</body>
+</html>
