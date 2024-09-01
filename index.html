@@ -3,25 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>水果派福利</title>
+    <title>水果派福利专区</title>
     <style>
         body {
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* 调整对齐方式，使内容向上靠拢 */
+            justify-content: flex-start;
             align-items: center;
             height: 100vh;
             margin: 0;
-            padding-top: 60px; /* 添加顶部内边距，使内容向下稍微移动 */
             font-family: 'Helvetica Neue', Arial, sans-serif;
             background-color: #f8f9fa;
         }
-        .logo {
-            margin-bottom: 40px;
+        .banner {
+            width: 100%;
+            background-color: #007bff; /* 可根据需要调整背景颜色 */
+            padding: 10px 0; /* 上下内边距 */
+            text-align: center;
         }
-        .logo img {
-            max-width: 150px; /* 调整Logo大小 */
+        .banner img {
+            width: 100%;
             height: auto;
+            max-height: 150px; /* 限制banner的最大高度 */
         }
         .search-container {
             width: 100%;
@@ -31,6 +34,7 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 30px; /* 调整搜索框与banner之间的距离 */
         }
         .search-container h1 {
             font-size: 1.8em;
@@ -67,9 +71,9 @@
     </style>
 </head>
 <body>
-    <!-- Logo区域，可以放置一个图片Logo -->
-    <div class="logo">
-        <img src="./8NA2hEHBa3Y58x2wN73Cx4jy.jpg" alt="Logo">
+    <!-- Banner区域，Logo占满整个页面顶部 -->
+    <div class="banner">
+        <img src="./8NA2hEHBa3Y58x2wN73Cx4jy.jpg" alt="Logo Banner">
     </div>
 
     <!-- 搜索框区域 -->
