@@ -20,6 +20,7 @@
             background-color: #fff; /* 可根据需要调整背景颜色 */
             padding: 10px 0; /* 上下内边距 */
             text-align: center;
+            box-sizing: border-box;
         }
         .banner img {
             width: 100%;
@@ -68,6 +69,13 @@
         }
         .search-container input[type="submit"]:hover {
             background-color: #0056b3;
+        }
+         /* 媒体查询：大屏幕（桌面）设备 */
+        @media (min-width: 1024px) {
+            .banner {
+                max-width: 1000px; /* 设置banner的最大宽度 */
+                margin: 0 auto; /* 居中对齐 */
+            }
         }
     </style>
 </head>
