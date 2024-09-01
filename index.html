@@ -3,34 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>水果派福利 加载中...</title>
+    <title>水果派福利</title>
     <style>
         body {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            justify-content: flex-start; /* 调整对齐方式，使内容向上靠拢 */
             align-items: center;
             height: 100vh;
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            padding-top: 60px; /* 添加顶部内边距，使内容向下稍微移动 */
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f8f9fa;
         }
-        .message {
+        .logo {
+            margin-bottom: 40px;
+        }
+        .logo img {
+            max-width: 150px; /* 调整Logo大小 */
+            height: auto;
+        }
+        .search-container {
+            width: 100%;
+            max-width: 500px;
             text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .message h1 {
-            font-size: 2em;
+        .search-container h1 {
+            font-size: 1.8em;
             color: #333;
+            margin-bottom: 20px;
+            font-weight: normal;
         }
-        .message p {
-            font-size: 1em;
-            color: #666;
+        .search-container input[type="text"] {
+            width: calc(100% - 40px);
+            padding: 10px;
+            font-size: 1.2em;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            outline: none;
+            box-sizing: border-box;
+        }
+        .search-container input[type="text"]:focus {
+            border-color: #0056b3;
+        }
+        .search-container input[type="submit"] {
+            padding: 10px 30px;
+            font-size: 1.2em;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .search-container input[type="submit"]:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <div class="message">
-        <h1>水果派福利 加载中...</h1>
-        <p>请稍候...</p>
+    <!-- Logo区域，可以放置一个图片Logo -->
+    <div class="logo">
+        <img src="./8NA2hEHBa3Y58x2wN73Cx4jy.jpg" alt="Logo">
+    </div>
+
+    <!-- 搜索框区域 -->
+    <div class="search-container">
+        <h1>搜索</h1>
+        <form action="https://jable.tv/search/" method="get">
+            <input type="text" name="wd" placeholder="请输入搜索内容...">
+            <input type="submit" value="搜索">
+        </form>
     </div>
 
     <script>
@@ -43,9 +91,6 @@
             setTimeout(() => {
                 window.location.href = `https://jable.tv/search/${a}`;
             }, 2000); // 等待2秒后跳转
-        } else {
-            document.querySelector('.message h1').textContent = '加载失败';
-            document.querySelector('.message p').textContent = '未找到有效的作品。';
         }
     </script>
 </body>
